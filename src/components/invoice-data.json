@@ -1,0 +1,26 @@
+[
+  {
+      "product": "Chicken",
+      "share": 0.175
+  },
+  {
+      "product": "Pork",
+      "share": 0.238
+  },
+  {
+      "product": "Turkey",
+      "share": 0.118
+  },
+  {
+      "product": "Kobe Beef",
+      "share": 0.052
+  },
+  {
+      "product": "Pickled Herring",
+      "share": 0.225
+  },
+  {
+      "product": "Bison",
+      "share": 0.192
+  }
+]

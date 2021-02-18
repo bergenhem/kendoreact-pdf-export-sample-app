@@ -1,0 +1,14 @@
+.neat-style {
+  color: rgb(255, 142, 166);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.button-area button {
+  margin-right: 10px;
+}
+
+.k-pdf-export {
+  background-color: #282c34;
+}
+
