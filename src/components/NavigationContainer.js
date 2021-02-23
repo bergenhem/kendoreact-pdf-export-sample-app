@@ -8,10 +8,10 @@ function NavigationContainer(props) {
   const history = useHistory();
 
   const items = [
-    { text: "HTML", id: 1, icon: "home", route: "/", selected: true },
-    { text: "Layout", id: 2, icon: "file-txt", route: "/LayoutSample" },
-    { text: "KendoReact Grid", id: 3, icon: "gear", route: "/GridExport" },
-    { text: "KendoReact TreeList", id: 4, icon: "dollar", route: "/TreeListExport" }
+    { text: "HTML", id: 1, icon: "html", route: "/", selected: true },
+    { text: "Layout", id: 2, icon: "template-manager", route: "/LayoutSample" },
+    { text: "KendoReact Grid", id: 3, icon: "grid", route: "/GridExport" },
+    { text: "KendoReact TreeList", id: 4, icon: "sort-asc", route: "/TreeListExport" }
   ];
 
   let currentRoute = 0;
