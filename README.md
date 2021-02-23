@@ -8,7 +8,7 @@ Specifically this project covers:
 - Exporting content in the [KendoReact Data Grid](https://www.telerik.com/kendo-react-ui/components/grid/)
 - Exporting content in the [KendoReact TreeList](https://www.telerik.com/kendo-react-ui/components/treelist/)
 
-As this project utilizes [KendoReact](https://www.telerik.com/kendo-react-ui/), a commercial UI component library for React developers. When downloading this project and running `npm start` you will be asked to provide a license key to remove a warning message in your developer console. In order to install a license key you will either need [to register for a free trial](https://www.telerik.com/download-login-v2-kendo-react-ui), or purchase a license of KendoReact. 
+As this project utilizes [KendoReact](https://www.telerik.com/kendo-react-ui/), a commercial UI component library for React developers. When downloading this project and running `npm start` you will be asked to provide a license key to remove a warning message in your developer console. In order to install a license key you will either need [to register for a free trial](https://www.telerik.com/download-login-v2-kendo-react-ui), or [purchase a license of KendoReact](https://www.telerik.com/kendo-react-ui/pricing/). 
 
 ## Running the Project
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and therefore the default scripts are available to compile and run the project.
