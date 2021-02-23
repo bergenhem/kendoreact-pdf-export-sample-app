@@ -45,7 +45,7 @@ function TreeListExport() {
     This new and transformed hierarchical data structure is then returned to out TreeList, letting the component
     have a set of pre-expanded data items.
   */
-  const addExpandField = dataTree => {
+  const addExpandField = (dataTree) => {
     const currentExpanded = expanded;
     return mapTree(dataTree, subItemsField, item =>
       extendDataItem(item, subItemsField, {

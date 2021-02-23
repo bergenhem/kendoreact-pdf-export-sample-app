@@ -26,11 +26,11 @@ function LayoutSample() {
 									{ text: "Executive", value: "size-executive" }
 								 ];
 
-	function handleExportWithComponent(e) {
+	const handleExportWithComponent = (e) => {
     pdfExportComponent.current.save();
   }
 
-	function updatePageLayout(event){
+	const updatePageLayout = (event) => {
 		setLayoutSelection(event.target.value);
 	}
 
