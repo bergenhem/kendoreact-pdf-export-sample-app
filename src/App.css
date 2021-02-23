@@ -16,6 +16,10 @@
   color: white;
 }
 
+.page-container {
+  margin: 1em;
+}
+
 .App-link {
   color: #61dafb;
 }
