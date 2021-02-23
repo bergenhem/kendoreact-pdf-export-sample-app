@@ -1,7 +1,9 @@
+import './GridExport.css';
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { Grid, GridColumn as Column, GridToolbar } from '@progress/kendo-react-grid';
 import { GridPDFExport } from '@progress/kendo-react-pdf';
 import { Button } from '@progress/kendo-react-buttons'
+import { Checkbox } from '@progress/kendo-react-inputs';
 import { gridSampleProducts } from './grid-sample-products.jsx';
 import { process } from '@progress/kendo-data-query';
 
@@ -14,9 +16,10 @@ function GridExport() {
     to format the data to make it easier to bind to the Grid. With paging this is a quick shorcut,
     but with filtering, sorting, and grouping (not enabled here) it will become very helpful.
   */
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
   const [take, setTake] = useState(5);
   const [skip, setSkip] = useState(0);
+  const [allPageCheck, setAllPageCheck] = useState(false);
   const [isPdfExporting, setIsPdfExporting] = useState(false);
   const pdfExportRef = useRef(null);
 
@@ -33,9 +36,14 @@ function GridExport() {
       if(!processedData.data.length) {
         setSkip(0);
       }
+      setData(gridSampleProducts);
     },
-    [processedData]
+    [processedData, data]
   );
+
+  const allPageChange = (event) => {
+    setAllPageCheck(!allPageCheck);
+  };
 
   const onPdfExportDone = useCallback(
     () => {
@@ -48,7 +56,12 @@ function GridExport() {
     () => {
       if(pdfExportRef.current) {
         setIsPdfExporting(true);
-        pdfExportRef.current.save(processedData.data, onPdfExportDone);
+        if(allPageCheck) {
+          pdfExportRef.current.save(data, onPdfExportDone);
+        }
+        else {
+          pdfExportRef.current.save(processedData.data, onPdfExportDone);
+        }        
       }
     },
     [processedData, onPdfExportDone]
@@ -92,7 +105,14 @@ function GridExport() {
 
   return (
     <>
-      <h1>Grid Export</h1>
+      <div className="grid-export-area">
+        <h1>Grid Export</h1>
+        <Checkbox
+          onChange={allPageChange}
+          checked={allPageCheck}
+          label={'Export All Pages'}
+        />
+      </div>
       {GridElement}
       <GridPDFExport ref={pdfExportRef}>
         {GridElement}
