@@ -8,11 +8,11 @@ function ExportExample () {
   const pdfExportComponent = useRef(null);
   const contentArea = useRef(null);
   
-  function handleExportWithComponent(e) {
+  const handleExportWithComponent = (event) => {
     pdfExportComponent.current.save();
   }
 
-  function handleExportWithFunction(e) {
+  const handleExportWithFunction = (event) => {
     savePDF(contentArea.current, { paperSize: "A4" });
   }
 
