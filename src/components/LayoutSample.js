@@ -26,7 +26,7 @@ function LayoutSample() {
 									{ text: "Executive", value: "size-executive" }
 								 ];
 
-	const handleExportWithComponent = (e) => {
+	const handleExportWithComponent = (event) => {
     pdfExportComponent.current.save();
   }
 
