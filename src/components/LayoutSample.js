@@ -1,5 +1,5 @@
 import './LayoutSample.css';
-import CompanyLogo from './company-logo.png';
+import KendokaLogo from './kendoka-logo.svg';
 import {
 	Chart,
 	ChartLegend,
@@ -59,7 +59,7 @@ function LayoutSample() {
 						<div className="inner-page">
 							<div className="pdf-header">
 								<span className="company-logo">
-									<img src={CompanyLogo} /> Blauer See Delikatessen
+									<img src={KendokaLogo} alt="Kendoka Company Logo" /> Blauer See Delikatessen
 								</span>
 								<span className="invoice-number">Invoice #23543</span>
 							</div>
