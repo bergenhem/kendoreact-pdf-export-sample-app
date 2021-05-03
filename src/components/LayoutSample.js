@@ -37,7 +37,7 @@ function LayoutSample() {
   return(
     <div id="example">
 			<div className="box wide hidden-on-narrow">
-				<div class="box-col">
+				<div className="box-col">
 					<h4>Select a Page Size</h4>
 					<DropDownList
 							data={ddData}
