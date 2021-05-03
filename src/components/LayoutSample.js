@@ -8,13 +8,13 @@ import {
 	ChartSeriesLabels,
 	ChartCategoryAxis,
 	ChartCategoryAxisItem
-} from "@progress/kendo-react-charts";
+} from '@progress/kendo-react-charts';
 import 'hammerjs';
 import { Button } from '@progress/kendo-react-buttons';
 import { PDFExport, savePDF } from '@progress/kendo-react-pdf';
 import { DropDownList } from '@progress/kendo-react-dropdowns';
 
-import sampleData from "./invoice-data.json";
+import sampleData from './invoice-data.json';
 import { useRef, useState, useEffect } from 'react';
 
 function LayoutSample() {
